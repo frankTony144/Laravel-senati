@@ -6,12 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Actualizar Usuario </h1>
-    <form action="/user/update" method="POST">
+    <h1> Nuevo Usuario </h1>
+    <form action="/user/store" method="POST">
         @csrf
 
         <label for="">Id:</label>
-        <input type="text" name="id" value="{{ $_GET['id'] }}" readonly>
+        <input type="text" name="id">
         
         <label for="">Name:</label>
         <input type="text" name="name">

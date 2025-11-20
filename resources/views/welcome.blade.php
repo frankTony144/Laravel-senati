@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pokemones</title>
 </head>
 <body>
-    holaaaa
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Imagen</th>
+    </tr>
+
+    @foreach ($pokemones as $index => $poke)
+        <tr>
+            <td>{{ $index + 1 }}</td>
+            <td>{{ ucfirst($poke['name']) }}</td>
+            <td>
+                <img src="{{ $poke['image'] }}" alt="{{ $poke['name'] }}">
+            </td>
+        </tr>
+    @endforeach
+</table>
+
 </body>
 </html>
